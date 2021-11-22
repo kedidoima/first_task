@@ -1,0 +1,20 @@
+extends ./layout
+block content
+    
+    a(href="/event/createEvent",class="btn btn-primary",role="button") Create new event 
+    br
+    a(href="/event/editEvent",class="btn btn-primary",role="button") Edit a event
+    table.table
+        tr 
+            th Id 
+            th Name 
+            th Date 
+            th Image
+        each event in events 
+            tr  
+                th= event.id
+                th= event.name 
+                th= event.date 
+                th
+                    img(src=event.img,width="64") 
+    

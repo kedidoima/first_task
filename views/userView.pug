@@ -1,0 +1,18 @@
+extends ./layout
+block content   
+    a(href="/user/editUser/"+user.id) Edit
+    br
+    a(href="/user") User list
+    table.table 
+        tr 
+            th  Id 
+            th= user.id
+        tr 
+            th Name 
+            th= user.name 
+        tr 
+            th Email 
+            th= user.email 
+        tr 
+            th Password 
+            th= user.password 

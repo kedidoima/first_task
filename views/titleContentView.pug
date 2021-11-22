@@ -1,0 +1,16 @@
+extends ./layout
+block content
+    
+    a(href="/tCs/createTC",class="btn btn-primary",role="button") Create new title-content
+    br
+    a(href="/tCs/editTC",class="btn btn-primary",role="button") Edit a title-content
+    table.table.md12
+        tr 
+            th Id
+            th Title 
+            th Content
+        each tC in tCs 
+            tr  
+                th= tC.id 
+                th= tC.title  
+                th= tC.content

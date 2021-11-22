@@ -1,0 +1,17 @@
+extends ./layout
+block content
+    a(href="/user/createUser",class="btn btn-primary",role="button") Create new user
+    br
+    
+    table.table
+        tr 
+            th Id 
+            th Name 
+            th View 
+        each user in users 
+            tr  
+                th= user.id
+                th= user.name 
+                th
+                    a(href="/user/userView/"+user.id) View
+    

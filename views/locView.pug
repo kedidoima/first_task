@@ -1,0 +1,19 @@
+extends ./layout
+block content
+    a(href="/locs/createLoc",class="btn btn-primary",role="button") Create new location
+    br
+    a(href="/locs/editLoc",class="btn btn-primary",role="button") Edit a location
+    table.table
+        tr 
+            th Id 
+            th Name 
+            th Des
+            th Image
+        each loc in locs 
+            tr  
+                th= loc.id
+                th= loc.name 
+                th= loc.des
+                th
+                    img(src=loc.img,width="64") 
+    

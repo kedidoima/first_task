@@ -1,0 +1,11 @@
+extends ./layout 
+block content 
+    p Edit user with id = #{id}
+    form(class="form-group",action="/user/editUser/"+id, method="post") 
+        label New name 
+        input(class="form-control",type="text", name="newName")
+        label New email 
+        input(class="form-control",type="text", name="newEmail")
+        label New password
+        input(class="form-control",type="text", name="newPassword")
+        button(class="btn btn-primary") Save

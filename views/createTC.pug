@@ -1,0 +1,10 @@
+extends ./layout
+block content
+    h1 Create title-content
+
+    form(class="form-group",action="/tCs/createTC", method="POST")
+        label New title 
+        input(class="form-control",name="newTitle",type="text")
+        label New content
+        input(class="form-control",name="newContent",type="text")
+        button(class="btn btn-primary") Save 

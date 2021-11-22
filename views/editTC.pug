@@ -1,0 +1,12 @@
+extends ./layout
+block content
+    h1 Edit title-content
+
+    form(class="form-group",action="/tCs/editTC", method="POST")
+        label Id of event
+        input(class="form-control",name="id",type="text")
+        label New title 
+        input(class="form-control",name="newTitle",type="text")
+        label New Content 
+        input(class="form-control",name="newContent",type="text")
+        button(class="btn btn-primary") Save 

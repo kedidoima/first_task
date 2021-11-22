@@ -1,0 +1,14 @@
+extends ./layout
+block content
+    h1 Edit location
+
+    form(class="form-group",action="/locs/editLoc", method="POST", enctype="multipart/form-data" )
+        label Id of location
+        input(class="form-control",name="id",type="text")
+        label New name
+        input(class="form-control",name="newName",type="text")
+        label New description
+        input(class="form-control",name="newDes",type="text")
+        label New image 
+        input(class="form-control",name="newImage",type="file",accept="image/*")
+        button(class="btn btn-primary") Save 

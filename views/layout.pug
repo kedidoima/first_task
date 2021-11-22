@@ -1,0 +1,16 @@
+html
+    head
+        <!-- CSS only -->
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",rel="stylesheet")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href="http://localhost:3000") First task
+            - 
+            if auth 
+                div(class="d-flex nav-item")
+                    a(href="/auth/logout") Logout
+            else
+                div(class="d-flex")
+                    a(href="/auth/login") Login
+        .container.pt-5 
+            block content 
