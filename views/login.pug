@@ -10,3 +10,9 @@ block content
         label(for="password") Password
         input(class="form-control",type="password", name="password")
         button(class="btn btn-primary") Login 
+    br 
+    p Sign in with 
+    a(href="/auth/facebook",class="btn btn-primary",role="button")
+        i.fa.fa-facebook(aria-hidden='true')  Facebook
+    a(href="/auth/google",class="btn btn-danger",role="button") 
+        i.fa.fa-google-plus(aria-hidden='true')  Google

@@ -1,11 +1,16 @@
 extends ./layout
 block content
-    h1 #{title}
-    p #{content}
-    a(href="/event",class="btn btn-primary",role="button") Event manager
-    br
-    a(href="/tCs",class="btn btn-primary",role="button") Title-content manager
-    br
-    a(href="/locs",class="btn btn-primary",role="button") Location manager
-    br
-    a(href="/user",class="btn btn-primary",role="button") User manager
+    div(class="jumbotron text-center")
+        h1 #{title}
+        p #{content}
+        a(href="/event",class="btn btn-primary",role="button") Event manager
+        br
+        a(href="/tCs",class="btn btn-primary",role="button") Title-content manager
+        br
+        a(href="/locs",class="btn btn-primary",role="button") Location manager
+        br
+        a(href="/user",class="btn btn-primary",role="button") User manager
+    
+        
+
+

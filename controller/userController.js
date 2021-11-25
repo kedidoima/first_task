@@ -16,22 +16,6 @@ const getUserView = async(req,res,next) => {
     })
 }
 
-const getCreateUser = async(req,res,next) =>{
-    res.render('createUser');
-}
-
-const postCreateUser = async(req,res,next) =>{
-    let number = await User.countDocuments();
-    let user = new User({
-        id : number + 1,
-        name : req.body.name,
-        email : req.body.email,
-        password : md5(req.body.password)
-    })
-    user = await user.save();
-    res.redirect('/user');
-}
-
 const getEditUser = async(req,res,next) => {
     const user = await User.find({id : req.params.id});
     res.render('editUser',{
@@ -51,8 +35,6 @@ const postEditUser = async(req,res,next) => {
 module.exports = {
     getUsers,
     getUserView,
-    getCreateUser,
     getEditUser,
-    postCreateUser,
     postEditUser
 }
