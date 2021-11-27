@@ -41,11 +41,4 @@ app.use('/locs',authMiddleware.requireAuth,locationRoute);
 app.use('/user',authMiddleware.requireAuth,userRoute);
 app.use('/auth',authRoute);
 
-app.get('/profile',(req,res) =>{
-    console.log(req.user);
-    res.send("you are valid user")
-})
-app.get('/failed',(req,res)=>{
-    res.send("You are a non valid user")
-})
 app.listen(port); 

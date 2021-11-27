@@ -54,8 +54,6 @@ const logout = async(req,res) => {
     return res.redirect("/auth/login");
 }
 
-
-
 module.exports = {
     login,
     postLogin,
